@@ -1,19 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Profile } from './profile/profile';
-import { About } from './about/about';
-import { Contacts } from './contacts/contacts';
+
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, Profile, About, Contacts],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  selector: "app-root",
+  imports: [RouterOutlet, RouterLink],
+  templateUrl: "./app.html",
+  styleUrls: ["./app.css"]
 })
 export class App {
-  protected readonly title = signal('MYANGULAR');
-}
 
+}
 
 
 
