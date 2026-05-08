@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-contacts',
@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './contacts.html',
   styleUrl: './contacts.css',
 })
-export class Contacts {}
+export class Contacts {
+email = signal("francis@example.com");
+changeEmail(){
+  this.email.set("frontenddeveloper@example.com")
+}
+}

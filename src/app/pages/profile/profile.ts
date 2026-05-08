@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
-export class Profile {}
+export class Profile {
+
+  username = signal("Francis Maina");
+
+  updateName(){
+    this.username.set("Angular Developer");
+  }
+
+}
