@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-blog',
@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './blog.html',
   styleUrl: './blog.css',
 })
-export class Blog {}
+export class Blog {
+
+  bloInfo = signal("This is my first blog post");
+
+  updateBlogInfo()
+{
+  this.bloInfo.set("This is my updated blog post");
+}
+
+}
