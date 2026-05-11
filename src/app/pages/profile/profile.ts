@@ -19,5 +19,12 @@ loggedIn = signal(true);
 
 toggleLogin(){
   this.loggedIn.set(!this.loggedIn());
+  
 }
+
+projects = [
+  'Portfloio website',
+  'Blog App',
+  'Forex Dashboard',
+]
 }
