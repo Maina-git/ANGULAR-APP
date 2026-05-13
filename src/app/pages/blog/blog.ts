@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { Card } from '../../services/card';
 
 @Component({
   selector: 'app-blog',
@@ -14,5 +15,12 @@ export class Blog {
 {
   this.bloInfo.set("This is my updated blog post");
 }
+
+visa = "";
+
+constructor(private userService:Card){
+  this.visa = this.userService.getVisaCard();
+}
+
 
 }
